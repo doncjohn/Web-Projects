@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+ ::-webkit-scrollbar {
+     width: 12px;
+}
+ ::-webkit-scrollbar-track {
+     box-shadow: inset 0 0 5px grey;
+     border-radius: 10px;
+}
+ ::-webkit-scrollbar-thumb {
+     background: #000;
+     border-radius: 10px;
+}
+ body {
+     font-family: "Poppins", sans-serif;
+     overflow: auto;
+}
+ ul {
+     list-style: none;
+}
+ a {
+     text-decoration: none;
+}
+ header {
+     position: sticky;
+     top: 0px;
+     background-color: #000000;
+     width: 100%;
+     z-index: 1000;
+}
+ .overlay {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     background-color: rgb(00, 00, 00, 0.5);
+}
+ .headcontainer {
+     max-width: 65rem;
+     padding: 0 2rem;
+     margin: 0 auto;
+     display: flex;
+     position: relative;
+}
+ .logo-container {
+     flex: 1;
+     display: flex;
+     align-items: center;
+}
+ .nav-btn {
+     flex: 3;
+     display: flex;
+}
+ .nav-links {
+     flex: 2;
+}
+ .log-sign {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex: 1;
+}
+ .logo {
+     color: #fff;
+     font-size: 1.1rem;
+     font-weight: 600;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     line-height: 3rem;
+}
+ .logo span {
+     font-weight: 300;
+}
+ .btn {
+     display: inline-block;
+     padding: 0.5rem 1.3rem;
+     font-size: 0.8rem;
+     border: 2px solid #fff;
+     border-radius: 2rem;
+     line-height: 1;
+     margin: 0 0.2rem;
+     transition: 0.3s;
+     text-transform: uppercase;
+}
+ .btn.solid, .btn.transparent:hover {
+     background-color: #fff;
+     color: #000000;
+}
+ .btn.transparent, .btn.solid:hover {
+     background-color: transparent;
+     color: #fff;
+}
+ .nav-links > ul {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+ .nav-link {
+     position: relative;
+}
+ .nav-link > a {
+     line-height: 3rem;
+     color: #fff;
+     padding: 0 0.8rem;
+     letter-spacing: 1px;
+     font-size: 0.95rem;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     transition: 0.5s;
+}
+ .nav-link > a > i {
+     margin-left: 0.2rem;
+}
+ .nav-link:hover > a {
+     transform: scale(1.1);
+}
+ @keyframes animation {
+     from {
+         opacity: 0;
+         transform: translateY(15px);
+    }
+     to {
+         opacity: 1;
+         transform: translateY(0px);
+    }
+}
+ @media (max-width: 920px) {
+     .nav-btn {
+         position: fixed;
+         height: calc(100vh - 3rem);
+         top: 3rem;
+         left: 0;
+         width: 100%;
+         background-color: #090909;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-between;
+         overflow-x: hidden;
+         overflow-y: auto;
+         transform: translateX(100%);
+         transition: 0.65s;
+    }
+}
+ .bnavbar {
+     overflow: hidden;
+     background-color: #000;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     display: none;
+     justify-content: center;
+}
+ .bnavbar div {
+     width: 25%;
+}
+ .bnavbar a {
+     display: block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 5px 0px;
+     text-decoration: none;
+     font-size: 12px;
+}
+ .bnavbar a:hover, .bnavbar a.active {
+     background: #f1f1f1;
+     color: black;
+}
+ @media only screen and (max-width: 600px) {
+     .bnavbar {
+         display: flex;
+    }
+     footer {
+         display: none;
+    }
+}
+ .button {
+     background: linear-gradient(45deg, #00b5f5, #002a8f);
+     border: none;
+     color: white;
+     padding: 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-radius: 50%;
+}
+ .btn-grad1 {
+    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 51%, #00d2ff 100%)
+}
+ .btn-grad2 {
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%)
+}
+ .btn-grad3 {
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #FF512F 100%)
+}
+ .btn-grad4 {
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%)
+}
+.board{
+    padding: 10px;
+}
+ .note {
+     float: left;
+     display: block;
+     position: relative;
+     padding: 1em;
+     width: 300px;
+     min-height: 3  00px;
+     margin: 0 30px 30px 0;
+     box-shadow: 5px 5px 10px -2px rgba(33, 33, 33, 0.3);
+     border-style: solid;
+}
+.remove {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    padding: 10px;
+    font-style: 1.6em;
+    font-weight: bolder;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .remove:hover {
+    color: #EF0005;
+  }
+  ::placeholder {
+    color: black;
+    opacity: 1;
+  }
+  .note textarea {
+    background-color: transparent;
+    border: none;
+    resize: vertical;
+    width: 100%;
+    padding: 5px;
+  }
+  .note textarea:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2) inset;
+  }
+  .note textarea.title {
+    font-size: 24px;
+    line-height: 1.2;
+    color: #000000;
+    height: 64px;
+    margin-top: 20px;
+    font-family: Arial;
+  }
+  .note textarea.content {
+    min-height: 150px;
+    font-family: Arial;
+    font-size: 20px;
+  }
